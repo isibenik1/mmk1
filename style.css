@@ -1,0 +1,195 @@
+:root {
+  --cream: #EDE6D6;
+  --brown-dark: #4A3721;
+  --copper: #ce5928;
+  --brown-mid: #573a21;
+  --text-dark: #1e1b18;
+  --bg-light: #f4f0e8;
+}
+body {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+h1, h2, h3, nav a, .logo span {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+.naslovnica {
+  height: 85vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+              url('SLIKE/header-bg.jpg') center/cover no-repeat;
+  color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding-bottom: 60px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--cream);
+  font-weight: 700;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+.logo img {
+  height: 45px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+.logo:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px var(--copper));
+}
+.naslovnica-text h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.naslovnica-text span {
+  color: var(--copper);
+}
+
+.naslovnica-text p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+nav a {
+  color: var(--cream);
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: var(--copper);
+}
+/* ===== O PROJEKTU ===== */
+.secondary-nav {
+  background: var(--brown-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+.secondary-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.secondary-nav a {
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.secondary-nav a:hover,
+.secondary-nav .active {
+  color: var(--copper);
+}
+
+.O projektu-naslovnica {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+              url('SLIKE/O\ projektu.jpg') center/cover no-repeat;
+  color: var(--cream);
+  text-align: center;
+  padding: 100px 30px;
+}
+
+.O projektu-naslovnica h1 {
+  font-size: 44px;
+  margin-bottom: 10px;
+  padding-right: 20px;
+}
+
+.O projektu-naslovnica p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.projekt-info {
+  background: var(--cream);
+  padding: 80px 40px;
+}
+
+.projekt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.projekt-img {
+  width: 500px;
+  height: auto;
+  display: block;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.projekt-text {
+  max-width: 600px;
+  padding-left: 40px;
+}
+
+.projekt-text h2 {
+  color: var(--brown-dark);
+  margin-bottom: 20px;
+}
+
+.projekt-text p {
+  color: var(--brown-mid);
+  margin-bottom: 20px;
+  text-align: justify;
+}
+footer {
+  text-align: center;
+  background: var(--brown-dark);
+  color: var(--cream);
+  padding: 25px;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .secondary-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .projekt-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-img {
+   width: 85%;
+    margin-bottom: 20px;
+  }
+  .project-text {
+    padding-left: 0; 
+  }
+}
